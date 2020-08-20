@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { getUser, postUser } from '../../api';
 const LogoImg = require('../../assets/img/benson.jpg');
 
@@ -8,10 +8,12 @@ const Home = () => {
 
 	const getData = async () => {
 		const res = await getUser();
+
 		changeData(res?.username);
 	};
 	const postData = async () => {
-		const res = await postUser({ userId: 3 });
+		const res = await postUser({ 'userId': 3 });
+
 		changeData2(res?.username);
 	};
 

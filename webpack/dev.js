@@ -8,7 +8,7 @@ module.exports = (env, argv) => {
 	return webpackMerge.merge(baseConfig(env, argv), {
 		mode: 'development',
 		entry: {
-			main: './src/app.js'
+			main: './src/app.tsx'
 		},
 		plugins: [
 			new HtmlWebpackPlugin({

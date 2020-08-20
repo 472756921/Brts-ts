@@ -4,15 +4,18 @@ module.exports = (env, argv) => {
 	const isProduction = argv.mode === 'production';
 
 	return {
-		resolve: {
-			extensions: ['.js', '.jsx', 'less', 'css']
-		},
+		resolve: { extensions: ['.ts', '.tsx', '.js', '.jsx', 'less', 'css'] },
 		module: {
 			rules: [
 				{
 					test: /\.(js|jsx)?$/,
 					exclude: /node_modules/,
 					use: { loader: 'babel-loader' }
+				},
+				{
+					test: /\.tsx?$/,
+					exclude: /node_modules/,
+					use: [{ loader: 'babel-loader' }, { loader: 'ts-loader' }]
 				},
 				{
 					/**

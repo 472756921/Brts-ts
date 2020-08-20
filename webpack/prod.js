@@ -9,7 +9,7 @@ module.exports = (env, argv) => {
 	return webpackMerge.merge(baseConfig(env, argv), {
 		mode: 'production',
 		entry: {
-			main: './src/app.js'
+			main: './src/app.tsx'
 		},
 		output: {
 			publicPath: './',
