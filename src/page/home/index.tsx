@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { getUser, postUser } from '../../api';
+import { Foo } from 'brts-design';
 const LogoImg = require('../../assets/img/benson.jpg');
 
 const Home = () => {
@@ -25,6 +26,7 @@ const Home = () => {
 			<button onClick={() => postData()}>Post Data</button>
 			{data}
 			{data2}
+			<Foo title="123"></Foo>
 		</div>
 	);
 };
