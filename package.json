@@ -4,7 +4,7 @@
 	"description": "支持 TS 的 Brts 应用",
 	"main": "index.ts",
 	"scripts": {
-		"lint": "eslint --ext .ts --ext .tsx src/",
+		"lint": "eslint --ext .ts --ext .tsx src/  --quiet",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "webpack --mode=production --config webpack/prod.js",
 		"start": "webpack-dev-server --config webpack/dev.js --colors --watch",
