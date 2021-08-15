@@ -17,7 +17,7 @@ module.exports = (env, argv) => {
 				filename: 'index.html'
 			})
 		],
-		devtool: 'cheap-module-eval-source-map',
+		devtool: 'eval-cheap-module-source-map', 
 		devServer: {
 			before(app) {
 				apiMocker(app, path.resolve('./mocks/index.js'));

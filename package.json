@@ -7,7 +7,7 @@
 		"lint": "eslint --ext .ts --ext .tsx src/  --quiet",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "webpack --mode=production --config webpack/prod.js",
-		"start": "webpack-dev-server --config webpack/dev.js --colors --watch",
+		"start": "webpack server --config webpack/dev.js",
 		"sbuild": "webpack --config webpack/server.js",
 		"commit": "git add . && git cz",
 		"commitmsg": "validate-commit-msg",
@@ -100,10 +100,10 @@
 		"typescript": "^3.9.7",
 		"url-loader": "^4.1.0",
 		"validate-commit-msg": "^2.14.0",
-		"webpack": "^4.43.0",
-		"webpack-cli": "^3.3.12",
-		"webpack-dev-server": "^3.11.0",
-		"webpack-merge": "^5.0.9"
+		"webpack": "^5.50.0",
+		"webpack-cli": "^4.7.2",
+		"webpack-dev-server": "^3.11.2",
+		"webpack-merge": "^5.8.0"
 	},
 	"dependencies": {
 		"brts-design": "^1.0.1",
