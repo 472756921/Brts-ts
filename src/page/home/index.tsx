@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { getUser, postUser } from '../../api';
 const LogoImg = require('../../assets/img/benson.jpg');
+import Styles from './index.less';
 
 const Home = () => {
 	const [data, changeData] = useState('');
@@ -20,7 +21,7 @@ const Home = () => {
 	return (
 		<div>
 			<img src={LogoImg} width="200" />
-			<div>this is BRTS</div>
+			<div className={Styles.redfont}>this is BRTS</div>
 			<button onClick={() => getData()}>get Data</button>
 			<button onClick={() => postData()}>Post Data</button>
 			{data}

@@ -1,9 +1,10 @@
 import { lazy } from 'react';
+import Home from '../page/home';
 
 const routes = [
 	{
 		'path': '/',
-		'component': lazy(() => import('../page/home'))
+		'component': Home
 	},
 	{
 		'path': '/login',

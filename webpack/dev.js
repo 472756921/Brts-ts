@@ -3,6 +3,7 @@ const baseConfig = require('./base.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const apiMocker = require('mocker-api');
 const path = require('path');
+const ReactRefreshPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 module.exports = (env, argv) => {
 	return webpackMerge.merge(baseConfig(env, argv), {
@@ -10,14 +11,17 @@ module.exports = (env, argv) => {
 		entry: {
 			main: './src/app.tsx'
 		},
+		target: 'web',
 		plugins: [
+			new ReactRefreshPlugin(),
 			new HtmlWebpackPlugin({
 				title: 'Benson',
 				template: './index.html',
-				filename: 'index.html'
+				filename: 'index.html',
+				cache: false
 			})
 		],
-		devtool: 'eval-cheap-module-source-map', 
+		devtool: 'eval-cheap-module-source-map',
 		devServer: {
 			before(app) {
 				apiMocker(app, path.resolve('./mocks/index.js'));
